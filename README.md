@@ -4,9 +4,9 @@
 
 ## 个人信息
 
-* 性 别：男&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;年 龄：28
-* 手 机：18092430560 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;  邮 箱：lixiamomo@outlook.com
-* 专 业：机器人技术工程 &emsp;&emsp;&emsp;&emsp;&emsp; 岗 位：通软/底软开发工程师
+* 性 别：男&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 年 龄：28
+* 手 机：18092430560 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;邮 箱：lixiamomo@outlook.com
+* 专 业：机器人技术工程 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;岗 位：通软/底软开发工程师
 
 ## 工作及教育经历
 
@@ -27,7 +27,8 @@
     * 通过GPU运行AI模型，针对不同播放场景，动态计算图像优化参数，进一步优化图像质量
     * 架构设计难点：如何设计架构达到多芯片共代码无耦合；如何有效管理资源，防止驱动、GPU、线程、内存等资源泄露；如何设计架构，使多芯片、多算法解耦的同时，避免重复造轮子，达到高内聚低耦合
     * 技术难点：设计实现OpenCL代码，通过GPU对原始图像进行预处理，满足模型输入要求；板端部署神经网络模型，满足性能、精度及软件架构需求；
-    * 效果：该芯片最大竞争力卖点，待7月外发客户。
+    * 结果：3个月设计、开发用户态、内核态多个模块代码，共1.8w行，当前正在性能方案设计，预计DW版本及外发客户问题单数量不超过3例；
+    * 效果：该芯片最大竞争力卖点，待7月外发客户；
 
 2. 华为/海思 - AI软件栈南向接口层 - 开发 - 2023.10-2023.12
     * 具体功能
