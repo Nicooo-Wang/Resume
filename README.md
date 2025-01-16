@@ -46,8 +46,8 @@
     * 获奖情况：AI-HAL是项目组中首个以C语言面向对象方式组织、测试驱动开发为流程的模块，架构clean，代码优秀，获得**上海海思 研发好作品**奖、**TVOS 致谢信**；
 
 ## 获奖经历
-* 华山论剑个人金奖（2024） [华为内网链接](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539)
-* 上海海思 研发好作品奖
+* 华山论剑个人金奖（2024）(所有获奖者中唯一14级，其余获奖者均为16+) [获奖照片](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HuaShanLunJian.jpg)[华为内网链接](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539)
+* 上海海思 研发好作品奖 [获奖照片](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HisiliconHaoZuoPin.jpg)
 * 芯星奖 (2024) [华为内网链接](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501165749786)
 * 互联网+省级金奖
 * 研究生二等奖学金（2020）
