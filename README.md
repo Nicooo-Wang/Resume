@@ -14,7 +14,9 @@
 * 西安电子科技大学&emsp;&emsp;&emsp;2019.9~2022.7&emsp;&emsp;&emsp;&emsp; 机器人技术工程-研究生
 * 西安工业大学&emsp;&emsp;&emsp;&emsp;&emsp;2014.9~2018.7&emsp;&emsp;&emsp;&emsp; 机械电子工程-本科
 
-## 专业技能
+## 个人介绍
+
+* 性格开朗，有技术追求；具备极强的学习能力及求知欲，非人工智能科班出身，工作之余钻研软件架构技术、学习AI算法、工程落地。
 
 * **软件开发**：精通 C/C++ 语言架构设计与编程模型，在职期间获得**华山论剑个人金奖、上海海思优秀作品奖、芯火奖**等多个奖项。负责AIPQ-Service 模块的架构设计与开发， AI 软件栈的重构方案设计与开发，了解驱动开发流程，具备PQ芯片驱动维护、开发经验；
 
@@ -49,7 +51,8 @@
 * 华山论剑个人金奖（2024）(所有获奖者中唯一14级，其余获奖者均为16+) [获奖照片](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HuaShanLunJian.jpg)[华为内网链接](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539)
 * 上海海思 研发好作品奖 [获奖照片](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HisiliconHaoZuoPin.jpg)
 * 芯星奖 (2024) [华为内网链接](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501165749786)
-* 互联网+省级金奖
+* 互联网+省级金奖 [获奖照片](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bgold.jpg)
+* 互联网+省级银奖 [获奖照片](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bsilver.jpg)
 * 研究生二等奖学金（2020）
 * 研究生二等奖学金（2019）
 
