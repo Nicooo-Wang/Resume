@@ -47,6 +47,20 @@
     * 结果：AI-HAL成为TvOS 的AI生态标准，同年支撑X高端芯片AI特性交付。
     * 获奖情况：AI-HAL是项目组中首个以C语言面向对象方式组织、测试驱动开发为流程的模块，架构clean，代码优秀，获得**上海海思 研发好作品**奖、**TVOS 致谢信**；
 
+### AI Infra
+
+### AI 算法
+1. Vision Transformer 项目 
+   * 项目概要：实现一个基于Vision Transformer的图像分类模型，提升图像识别精度和效率。
+   * 技术概要：不借助torch现有Model，阅读论文从零手写每个细节，包括`Position emb`,`Patch emb`等等，学习Transformer基本原理及实现
+   * 结果：实现两个版本；1. 纯手写版本，由于需要重头训练模型，代价较高，在微型数据集上运行了几个epoch确认模型收敛。2. 迁移学习版本，基于Pytorch预训练模型，重训head，在微型数据集上达到99%分类准确性。
+   
+2. Vision Transformer 项目 
+   * 项目概要：实现一个基于Vision Transformer的图像分类模型，提升图像识别精度和效率。
+   * 技术概要：不借助torch现有Model，阅读论文从零手写每个细节，包括`Position emb`,`Patch emb`等等，学习Transformer基本原理及实现
+   * 结果：实现两个版本；1. 纯手写版本，由于需要重头训练模型，代价较高，在微型数据集上运行了几个epoch确认模型收敛。2. 迁移学习版本，基于Pytorch预训练模型，重训head，在微型数据集上达到99%分类准确性。
+   
+
 ## 获奖经历
 * 华山论剑个人金奖（2024）(所有获奖者中唯一14级，其余获奖者均为16+) [获奖照片](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HuaShanLunJian.jpg)[华为内网链接](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539)
 * 上海海思 研发好作品奖 [获奖照片](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HisiliconHaoZuoPin.jpg)
