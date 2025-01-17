@@ -65,7 +65,7 @@ AIPQ-Service - \[华为-海思\] - 软件架构设计、开发 - 2024.2-2024.8
 * **项目总结**：AI-HAL 是项目组中首个以 C 语言面向对象方式组织、测试驱动开发为流程的模块，架构清晰，代码优秀，获得 **上海海思研发好作品奖**。
 
 ### AI Infra
-**Needle - 2024.6-2025.1**
+**Needle[🔗Project Link](https://github.com/Nicooo-Wang/Needle) - 2024.6-2025.1**
 
 * **项目概要**：Needle 是一个简易版 PyTorch 的实现，其项目框架源自 [CMU 10-414/714](https://dlsyscourse.org/) Deep Learning System 课程。通过 Needle，用户能够在 Python 侧使用简洁的接口定义模型，轻松完成神经网络的训练和推理，降低了深度学习模型开发的复杂性。
 
