@@ -84,10 +84,10 @@
 **项目背景**：Needle 是一个简易版 PyTorch 的实现，其项目框架源自 [CMU 10-414/714](https://dlsyscourse.org/) Deep Learning System 课程。通过 Needle，用户能够在 Python 侧使用简洁的接口定义模型，轻松完成神经网络的训练和推理，降低了深度学习模型开发的复杂性。
 
 * **自动微分（Automatic Differentiation）**：通过抽象类 `NDArray`、`Tensor` 和 `Device`，实现了自动梯度推导，支持两种模式：eager mode 和 lazy model，满足多种使用场景。
-* **算子支持（Operator Support）**：支持了常用的大多数算子，如 `Stack`、`Permute` 等。其中，`Conv (Im2Col)` 和 `Matmul (2D Tiling)` 算子的**性能达到了 NVIDIA cuBLAS 的 68%**，在大规模矩阵运算中展现出优越的计算效率，极大提升了模型的运行速度。
-* **后端支持（Backend）**：通过 `Device` 的抽象，成功实现了对 `numpy`、`CUDA` 和 `CPU` 三种后端的支持，确保了模型能够在不同硬件环境下高效运行。这种设计使得用户能够根据需求灵活选择计算后端，优化资源利用。
-* **优化器（Optimizers）**：实现了 `Adam` 和 `SGD` 两种常用的优化器，提供了多种训练策略以满足不同模型的需求。
-* **常用模型（Common Models）**：编写了 `ResNet9` 模型，并在 CIFAR 数据集上成功验证，展示了 Needle 可靠性。
+* **算子支持（Operator Support）**：支持了常用的大多数算子，如 `Stack`、`Permute` 等。其中，`Conv (Im2Col)` 和 `Matmul (2D Tiling)` 算子的**性能达到了 NVIDIA cuBLAS 的 68%**，极大提升了模型的运行速度。
+* **后端支持（Backend）**：实现了对 `numpy`、`CUDA` 和 `CPU` 三种后端的支持，确保了模型能够在不同硬件环境下高效运行。
+* **优化器（Optimizers）**：实现了 `Adam` 和 `SGD` 两种常用的优化器，满足不同模型的需求。
+* **神经网络模型（Models）**：编写了 `ResNet9` 模型，并在 CIFAR 数据集上成功验证，展示了 Needle 可靠性。
 ---
 ### AI 算法
 ---
@@ -106,7 +106,7 @@
 
 ---
 
-**Vision Transformer 实现 - 图像分类模型开发**
+### **Vision Transformer 实现 - 图像分类模型开发**
 
 * **项目概要**：实现一个基于 Vision Transformer 的图像分类模型，以提升图像识别的精度和效率。
 
