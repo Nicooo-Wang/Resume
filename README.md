@@ -64,6 +64,15 @@
 * **项目总结**：AI-HAL 是项目组中首个以 C 语言面向对象方式组织、测试驱动开发为流程的模块，架构清晰，代码优秀，获得 **上海海思研发好作品奖**。
 
 ### AI Infra
+**Needle - 开发 - 2024.6-2025.1**
+
+* **项目概要**：Needle 是一个简易版 PyTorch 的实现，其项目框架源自 [CMU 10-414/714](https://dlsyscourse.org/) Deep Learning System 课程。通过 Needle，用户能够在 Python 侧使用简洁的接口定义模型，轻松完成神经网络的训练和推理，降低了深度学习模型开发的复杂性。
+
+* **自动微分（Automatic Differentiation）**：通过抽象类 `NDArray`、`Tensor` 和 `Device`，实现了自动梯度推导，支持两种模式：eager mode 和 lazy model，满足多种使用场景。
+* **算子支持（Operator Support）**：支持了常用的大多数算子，如 `Stack`、`Permute` 等。其中，`Conv (Im2Col)` 和 `Matmul (2D Tiling)` 算子的性能达到了 NVIDIA cuBLAS 的 68%，在大规模矩阵运算中展现出优越的计算效率，极大提升了模型的运行速度。
+* **后端支持（Backend）**：通过 `Device` 的抽象，成功实现了对 `numpy`、`CUDA` 和 `CPU` 三种后端的支持，确保了模型能够在不同硬件环境下高效运行。这种设计使得用户能够根据需求灵活选择计算后端，优化资源利用。
+* **优化器（Optimizers）**：实现了 `Adam` 和 `SGD` 两种常用的优化器，提供了多种训练策略以满足不同模型的需求。
+* **常用模型（Common Models）**：编写了 `ResNet9` 模型，并在 CIFAR 数据集上成功验证，展示了 Needle 可靠性。
 
 ### AI 算法
 1. Vision Transformer 项目 
