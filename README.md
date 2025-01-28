@@ -20,9 +20,9 @@
 
 * **软件开发**：精通 C/C++ 语言的架构设计与开发，拥有丰富的多线程编程和性能优化经验。入职两年来获得**华山论剑个人金奖、上海海思研发好作品奖、芯火奖**等多个荣誉。负责AIPQ-Service模块的架构设计与开发，以及AI软件栈的重构方案设计与开发；熟悉驱动开发，具备多颗海思画质芯片的驱动维护与开发经验。
 
-* **AI Infra**：掌握AI Infra相关技术栈，**独立开发Needle神经网络推理库**。了解CUDA和OpenCL算子开发，熟悉反向传播算法及常用高性能算子优化（如Conv、Matmul）。
+* **AI Infra**：掌握AI Infra相关技术栈，**独立开发[🔗Needle](https://github.com/Nicooo-Wang/Needle)神经网络推理库**。了解CUDA和OpenCL算子开发，熟悉反向传播算法及常用高性能算子优化（如Conv、Matmul）。
 
-* **AI算法**：熟悉常用神经网络算法的原理，能够独立复现常见、经典AI算法，曾复现过**Vision Transformer、FCOS**等经典算法。能够熟练运用**迁移学习、模型蒸馏**等模型训练与优化技术。
+* **AI算法**：熟悉常用神经网络算法的原理，能够独立复现常见、经典AI算法，曾复现过**[🔗Vision Transformer](https://github.com/Nicooo-Wang/Vit)、FCOS**等经典算法。能够熟练运用**迁移学习、模型蒸馏**等模型训练与优化技术。
 
 ## 项目经历
 
@@ -107,7 +107,7 @@
 
 ---
 
-### **Vision Transformer 实现 - 图像分类模型开发**
+### **Vision Transformer[🔗Project Link](https://github.com/Nicooo-Wang/Vit) 实现 - 图像分类模型开发**
 
 * **项目概要**：实现一个基于 Vision Transformer 的图像分类模型，以提升图像识别的精度和效率。
 
