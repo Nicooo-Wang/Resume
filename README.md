@@ -10,7 +10,7 @@
 
 ## 工作及教育经历
 
-* 华为&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;2022.8~至今&emsp;&emsp;&emsp;&emsp;&emsp; 海思-智慧媒体开发部
+* 华为&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;2022.8~至今&emsp;&emsp;&emsp;&emsp;&emsp; 
 * 西安电子科技大学&emsp;&emsp;&emsp;2019.9~2022.7&emsp;&emsp;&emsp;&emsp; 机器人技术工程-研究生
 * 西安工业大学&emsp;&emsp;&emsp;&emsp;&emsp;2014.9~2018.7&emsp;&emsp;&emsp;&emsp; 机械电子工程-本科
 
