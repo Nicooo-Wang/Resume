@@ -1,5 +1,5 @@
  <center>
-     <h1>王天乐</h1>
+     <h1>李天天</h1>
  </center>
 
 ## 个人信息
@@ -16,14 +16,22 @@
 
 ## 个人介绍
 
-* 性格开朗，拥有强烈的技术追求，具备较强的学习能力和求知欲。在工作之余积极钻研软件架构技术，学习 AI 算法及 AI Infra，并有一定的项目积累。
+* 性格开朗，拥有强烈的技术追求，具备较强的学习能力和求知欲。当前工作方向为AI软件相关，具有一定的 AI 算法及 AI Infra项目积累。
 
-* **软件开发**：精通 C/C++ 语言的架构设计与开发，拥有丰富的多线程编程和性能优化经验。入职两年来获得**华山论剑个人金奖、上海海思研发好作品奖、芯火奖**等多个荣誉。负责AIPQ-Service模块的架构设计与开发，以及AI软件栈的重构方案设计与开发；熟悉驱动开发，具备多颗海思画质芯片的驱动维护与开发经验。
+* **AI软件开发**：精通 C/C++ 语言的架构设计与开发，拥有丰富的多线程编程和性能优化经验。入职两年来获得**华山论剑个人金奖、上海海思研发好作品奖、芯火奖**等多个荣誉。负责AIPQ-Service模块的架构设计与开发，以及AI软件栈的重构方案设计与开发；熟悉驱动开发，具备多颗海思画质芯片的驱动维护与开发经验。
 
 * **AI Infra**：掌握AI Infra相关技术栈，**独立开发[🔗Needle神经网络推理库](https://github.com/Nicooo-Wang/Needle)**。了解CUDA和OpenCL算子开发，熟悉反向传播算法及常用高性能算子优化，如Conv(im2col高并行度)、Matmul (2D tiling 达到cuBLAS 70性能)。
 
 * **AI算法**：熟悉常用神经网络算法的原理，能够独立复现常见、经典AI算法，曾复现过[🔗Vision Transformer](https://github.com/Nicooo-Wang/Vit)、FCOS等经典算法。能够熟练运用**迁移学习、模型蒸馏**等模型训练与优化技术。
 
+## 获奖经历
+* 华山论剑个人金奖（2024）(所有获奖者中唯一14级，其余获奖者均为16+) [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HuaShanLunJian.jpg)[\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539)
+* 上海海思 研发好作品奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HisiliconHaoZuoPin.jpg)
+* 芯星奖 (2024) [\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501165749786)
+* 互联网+省级金奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bgold.jpg)
+* 互联网+省级银奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bsilver.jpg)
+* 研究生二等奖学金（2020）
+* 研究生二等奖学金（2019）
 ## 项目经历
 
 ### 软件方向
@@ -121,14 +129,6 @@
 * **结果**：成功复现Vision Transformer，加深了对模型机制的理解，而迁移学习版本则有效提升了模型的实际应用性能。
 ---
 
-## 获奖经历
-* 华山论剑个人金奖（2024）(所有获奖者中唯一14级，其余获奖者均为16+) [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HuaShanLunJian.jpg)[\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539)
-* 上海海思 研发好作品奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HisiliconHaoZuoPin.jpg)
-* 芯星奖 (2024) [\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501165749786)
-* 互联网+省级金奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bgold.jpg)
-* 互联网+省级银奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bsilver.jpg)
-* 研究生二等奖学金（2020）
-* 研究生二等奖学金（2019）
 
 ## 个人账号
 * blog 地址 [主要分享架构设计、测试驱动开发等内容](https://nicooo-wang.github.io/)
