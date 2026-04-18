@@ -1,0 +1,93 @@
+ <center>
+     <h1>李天天</h1>
+ </center>
+
+## 个人信息
+
+* 性 别：男&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 年 龄：30
+* 手 机：15529252738 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;邮 箱：lixiamomo@outlook.com
+* 专 业：机器人技术工程 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;岗 位：AI推理加速/部署工程师
+
+## 工作及教育经历
+
+* 华为&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;2022.8~至今&emsp;&emsp;&emsp;&emsp;&emsp;AI推理加速工程师 / PL
+* 西安电子科技大学&emsp;&emsp;&emsp;2019.9~2022.7&emsp;&emsp;&emsp;&emsp; 机器人技术工程-研究生
+* 西安工业大学&emsp;&emsp;&emsp;&emsp;&emsp;2014.9~2018.7&emsp;&emsp;&emsp;&emsp; 机械电子工程-本科
+
+## 个人介绍
+
+* 机器人技术工程硕士，研究方向为索牵引并联机器人的动力学建模与欠约束索牵引机器人轨迹规划。当前从事大模型推理加速与部署工作，具备团队管理经验，具备从算子开发到模型部署的全链路工程能力，曾获**华山论剑个人金奖、特战卓越贡献奖**等多项荣誉。
+
+* **机器人**：熟悉机器人**运动学、动力学建模**方法，熟悉**轨迹规划**与**运动控制**，有 **ROS** 系统使用经验。硕士期间完成欠约束索牵引并联机器人的动力学建模、工作空间求解与点到点轨迹规划研究。
+
+* **模型推理加速**：精通 C/C++ 高性能算子开发，精通 Ascend NPU 算子开发，熟悉CUDA算子开发。主导开发 GroupedMatMul & AlltoAllv 等计算通信融合算子，**DeepSeek Qwen等常见模型 shape 下性能平均提升 3.5 倍**，获得**特战卓越贡献奖**。熟悉量化、计算通信重叠等推理优化技术。
+
+* **模型部署**：精通端侧 AI 模型部署架构设计，负责 AIPQ-Service 模块从方案设计到上线交付全流程，获得**华山论剑个人金奖**。具备丰富的多线程编程、内存优化、资源管理经验。
+
+* **AI 基础能力**：熟悉 **Qwen、DeepSeek** 等大语言模型及传统 CV 模型原理，能够独立复现 **Vision Transformer**、**FCOS** 等经典算法。掌握**迁移学习、模型蒸馏**等模型优化技术。独立开发过[🔗Needle 神经网络推理库](https://github.com/Nicooo-Wang/Needle)，Matmul 算子性能达到 cuBLAS 的 68%。
+
+
+## 获奖经历
+* **特战卓越贡献奖**（2026）[\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI2026041810823971)
+* **质量之星**（2025）[\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202601059667440)
+* Omni Infer 推理框架项目组感谢信（2025）[\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202601059664048)
+* **华山论剑个人金奖**（2024）[\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HuaShanLunJian.jpg)[\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539)
+* 上海海思 研发好作品奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HisiliconHaoZuoPin.jpg)
+* 芯星奖（2024）[\[华为内网链接\]](https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501165749786)
+* 互联网+省级金奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bgold.jpg)
+* 互联网+省级银奖 [\[获奖照片\]](https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bsilver.jpg)
+
+## 项目经历
+
+---
+### 欠约束索牵引并联机器人动力学建模与轨迹规划 - [西安电子科技大学-硕士课题] - 2019.9-2022.7
+
+**课题背景**：不完全约束索牵引并联机器人（IRPM）仅使用少量绳索控制末端执行器实现多自由度运动。核心难点在于系统欠约束导致可控与不可控自由度耦合，需建立精确的动力学模型并在轨迹规划中引入动力学约束以保证运动稳定性。
+
+**研究成果**：
+- **动力学建模**：建立了 IRPM 系统的内部动力学方程（Internal Dynamics），将可控自由度与不可控自由度的耦合关系显式表达，为轨迹规划提供动力学约束基础。同时建立了考虑万向滑轮半径与转角的静平衡逆运动学模型，通过力封闭与几何封闭方程联立，使用带边界条件的凸优化方法求解索力分配。
+- **轨迹规划**：提出了 IRPM 点到点轨迹规划方法，通过修改运动规律函数将动力学约束嵌入规划过程，保证起止点稳定且轨迹高阶光滑可导。在三索六自由度系统上分别规划了绕 x 轴、同时绕 x/y 轴、绕 y 轴的三段轨迹，验证了算法有效性。
+- **工作空间分析与结构优化**：定义了适用于欠约束系统的静平衡工作空间（SEW），提出求解策略与性能评估方法，通过田口实验与全因子正交实验优化了系统结构参数。
+- 使用 Simulink-Simscape Multibody 完成系统建模与[🔗仿真验证](https://www.bilibili.com/video/BV1hF411q7n8/)。
+
+---
+### MoE 大模型推理加速 - 计算通信融合算子开发 [🔗Project Link](https://gitcode.com/cann/ops-transformer/tree/master/mc2/quant_grouped_mat_mul_allto_allv) - [华为] - 2024.12-至今
+
+**项目背景**：MoE（Mixture of Experts）大模型在训练和推理 Prefill 阶段，路由专家的 GroupedMatMul 计算与跨卡 AlltoAllv 通信是关键性能瓶颈。原方案中计算与通信串行执行，且路由专家与共享专家无法并行，导致端到端延迟较高。
+
+**项目成果**：
+- 获得**特战卓越贡献奖**；
+- 在常见 shape 下测试，相较于原方案算子**性能平均提升 3.5 倍**。
+
+**技术方案**：
+* **计算通信融合**：将路由专家的 GroupedMatMul、Unpermute、AlltoAllv 三个操作融合为单一算子，采用"先计算后通信"策略，实现计算与通信的流水线重叠，消除串行等待。
+* **路由专家与共享专家并行**：在融合算子内部实现路由专家 GMM 与共享专家 MatMul 的并行调度（GmmA2avScheduler），充分利用 NPU 的 AIC 计算资源。
+* **量化支持**：支持 PerTensor 和 MX 两种量化模式（HIFLOAT8 / FP8_E4M3FN / FP8_E5M2 / FP4_E2M1），通过量化 Scale 反量化机制在低精度下保持计算精度。
+
+---
+### AIPQ-Service - 端侧 AI 模型部署 - [华为-海思] - 软件架构设计、开发 - 2024.2-2024.8
+
+**项目背景**：通过用户态进程运行分类网络，动态计算图像优化参数，以提升码流播放场景下的图像质量。
+
+**项目成果**：
+- 架构设计获得 **华山论剑个人金奖**；
+- 在 45 天内完成方案架构设计，开发代码 9000+ 行，模块上线一年内仅收到一例提单；
+- 利用 AIPQ 特性，成功使 6xx 系中端芯片与 8xx 系芯片在画质效果上具有相似竞争力。
+
+**技术方案简述**：通过用户态守护进程实时多线程运行多组 AIPQ 模型，动态计算图像优化参数。
+* **技术难点**：
+	* 编写多个 OpenCL 算子（YUV444 转 RGB、Histogram 统计等），满足模型前后处理需求。
+	* 对性能要求极高，根据场景不同，需要并行运行多组 AIPQ 算法，部分算法需要多 worker 协作，以高并发掩盖数据处理过程，同时确保各个场景下模块的资源管理和线程安全。
+	* 考虑到架构演进，需要处理多芯片、多形态算法的差异，对架构设计提出更高要求。
+* **算法与性能优化**：
+  * **性能优化**：设计 DMA 零拷贝方案、模型硬化方案等，有效降低内存拷贝次数，**优化 DDR 带宽 50%**；识别并推动 Cast 取帧方案落地，**优化 CPU 占用 12%**。
+  * **算法优化**：通过迁移学习和模型蒸馏，将模型准确率从 **83% 提升至 89%**。
+
+---
+
+## 个人账号
+* blog 地址 [主要分享架构设计、测试驱动开发等内容](https://nicooo-wang.github.io/)
+* Wechat && 手机号 15529252738
+
+## 其他信息
+* 英语雅思6.5，能够无压力阅读英文论文、听懂英文课程与技术讲座
