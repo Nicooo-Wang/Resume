@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李天天 - AI推理加速/部署工程师</title>
+<style>
+  :root {
+    --primary: #2b5797;
+    --accent: #c0392b;
+    --text: #2c3e50;
+    --text-light: #555;
+    --border: #dce1e8;
+    --bg-section: #f7f9fc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", -apple-system, sans-serif;
+    color: var(--text); background: #eef1f5; line-height: 1.7; font-size: 14.5px;
+  }
+  .page {
+    max-width: 860px; margin: 32px auto; background: #fff;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.08); border-radius: 6px; overflow: hidden;
+  }
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, var(--primary) 0%, #1a3a6a 100%);
+    color: #fff; padding: 36px 48px 28px; position: relative;
+  }
+  .header h1 { font-size: 28px; font-weight: 700; letter-spacing: 4px; margin-bottom: 12px; }
+  .header .subtitle { font-size: 15px; opacity: 0.85; margin-bottom: 16px; }
+  .info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 6px 32px; font-size: 13.5px;
+  }
+  .info-grid span { opacity: 0.9; }
+  .info-grid .label { opacity: 0.65; margin-right: 6px; }
+  a { transition: color 0.15s; }
+  /* Body */
+  .body { padding: 0 48px 36px; }
+  .section { margin-top: 30px; }
+  .section-title {
+    font-size: 17px; font-weight: 700; color: var(--primary);
+    border-bottom: 3px solid var(--primary); padding-bottom: 6px;
+    margin-bottom: 16px; letter-spacing: 2px;
+  }
+  /* Timeline */
+  .timeline-item {
+    display: flex; align-items: baseline; padding: 6px 0; font-size: 14px;
+    position: relative; padding-left: 16px;
+  }
+  .timeline-item::before {
+    content: ''; position: absolute; left: 0; top: 13px;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--primary);
+  }
+  .timeline-item .org { font-weight: 600; min-width: 160px; }
+  .timeline-item .period { color: var(--text-light); min-width: 150px; font-size: 13px; }
+  .timeline-item .role { color: var(--text-light); }
+  /* Skills */
+  .skill-block { margin-bottom: 14px; }
+  .skill-block .skill-label {
+    display: inline-block; background: none; color: var(--primary);
+    padding: 0; border-radius: 0; font-size: 14px; font-weight: 700;
+    margin-bottom: 4px; border-bottom: 2px solid var(--primary);
+  }
+  .skill-block p { margin-left: 2px; color: var(--text); font-size: 14px; }
+  .skill-block strong { color: var(--text); }
+  .intro-text { margin-bottom: 16px; font-size: 14.5px; line-height: 1.8; }
+  .highlight { color: var(--accent); font-weight: 700; }
+  /* Awards */
+  .awards-list { list-style: none; }
+  .awards-list li {
+    padding: 6px 0 6px 16px; font-size: 14px;
+    border-bottom: 1px dashed var(--border);
+    position: relative;
+  }
+  .awards-list li::before {
+    content: '▸'; position: absolute; left: 0; color: var(--primary); font-size: 12px;
+  }
+  .awards-list li:last-child { border-bottom: none; }
+  .award-name { font-weight: 700; }
+  .award-year { color: var(--text-light); font-size: 13px; margin-left: 4px; }
+  .award-link { color: var(--primary); text-decoration: none; font-size: 12px; margin-left: 4px; }
+  .award-link:hover { text-decoration: underline; }
+  /* Projects */
+  .project { margin-bottom: 28px; }
+  .project-header {
+    background: var(--bg-section); padding: 12px 16px; border-radius: 4px;
+    border-left: 3px solid var(--primary); margin-bottom: 10px;
+  }
+  .project-header h3 { font-size: 15px; color: var(--text); margin-bottom: 2px; }
+  .project-header .project-meta { font-size: 12.5px; color: var(--text-light); }
+  .project-header .project-meta a { color: var(--primary); text-decoration: none; }
+  .project-header .project-meta a:hover { text-decoration: underline; }
+  .project-label {
+    font-weight: 700; color: var(--primary); font-size: 13.5px;
+    margin: 10px 0 4px; padding-left: 8px;
+    border-left: 2px solid var(--primary);
+  }
+  .project p, .project li { font-size: 14px; }
+  .project ul { padding-left: 20px; }
+  .project li { margin-bottom: 5px; }
+  .tech-item { margin-bottom: 6px; }
+  .tech-item strong { color: var(--text); }
+  /* Footer */
+  .footer {
+    border-top: 2px solid var(--border); padding: 18px 48px;
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    font-size: 13px; color: var(--text-light); background: var(--bg-section);
+  }
+  .footer a { color: var(--primary); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+  .footer span + span::before {
+    content: '·'; margin-right: 8px; color: var(--border);
+  }
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; border-radius: 0; max-width: 100%; }
+    .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .footer { background: none; }
+    .project { break-inside: avoid; }
+    .project-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .timeline-item::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: var(--primary) !important; }
+    .award-link { display: none; }
+  }
+  @media (max-width: 640px) {
+    .header, .body, .footer { padding-left: 24px; padding-right: 24px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .timeline-item { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>李天天</h1>
+    <div class="subtitle">AI推理加速/部署工程师 · 机器人技术工程硕士</div>
+    <div class="info-grid">
+      <span><span class="label">手机</span>15529252738</span>
+      <span><span class="label">邮箱</span>lixiamomo@outlook.com</span>
+      <span><span class="label">专业</span>机器人技术工程</span>
+      <span><span class="label">年龄</span>30</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- 工作及教育经历 -->
+    <div class="section">
+      <div class="section-title">工作及教育经历</div>
+      <div class="timeline-item">
+        <span class="org">华为</span>
+        <span class="period">2022.8 ~ 至今</span>
+        <span class="role">AI推理加速工程师 / PL</span>
+      </div>
+      <div class="timeline-item">
+        <span class="org">西安电子科技大学</span>
+        <span class="period">2019.9 ~ 2022.7</span>
+        <span class="role">机器人技术工程 · 研究生</span>
+      </div>
+      <div class="timeline-item">
+        <span class="org">西安工业大学</span>
+        <span class="period">2014.9 ~ 2018.7</span>
+        <span class="role">机械电子工程 · 本科</span>
+      </div>
+    </div>
+
+    <!-- 个人介绍 -->
+    <div class="section">
+      <div class="section-title">个人介绍</div>
+      <p class="intro-text">机器人技术工程硕士，研究方向为索牵引并联机器人的动力学建模与欠约束索牵引机器人轨迹规划。当前从事大模型推理加速与部署工作，具备团队管理经验，具备从算子开发到模型部署的全链路工程能力，曾获<strong class="highlight">华山论剑个人金奖</strong>、<strong class="highlight">特战卓越贡献奖</strong>等多项荣誉。</p>
+      <div class="skill-block">
+        <span class="skill-label">机器人</span>
+        <p>熟悉机器人<strong>运动学、动力学建模</strong>方法，熟悉<strong>轨迹规划</strong>与<strong>运动控制</strong>，有 <strong>ROS</strong> 系统使用经验。硕士期间完成欠约束索牵引并联机器人的动力学建模、工作空间求解与点到点轨迹规划研究。</p>
+      </div>
+      <div class="skill-block">
+        <span class="skill-label">模型推理加速</span>
+        <p>精通 C/C++ 高性能算子开发，精通 Ascend NPU 算子开发，熟悉 CUDA 算子开发。主导开发 GroupedMatMul &amp; AlltoAllv 等计算通信融合算子，<strong class="highlight">DeepSeek Qwen 等常见模型 shape 下性能平均提升 3.5 倍</strong>，获得<strong class="highlight">特战卓越贡献奖</strong>。熟悉量化、计算通信重叠等推理优化技术。</p>
+      </div>
+      <div class="skill-block">
+        <span class="skill-label">模型部署</span>
+        <p>精通端侧 AI 模型部署架构设计，负责 AIPQ-Service 模块从方案设计到上线交付全流程，获得<strong class="highlight">华山论剑个人金奖</strong>。具备丰富的多线程编程、内存优化、资源管理经验。</p>
+      </div>
+      <div class="skill-block">
+        <span class="skill-label">AI 基础能力</span>
+        <p>熟悉 <strong>Qwen、DeepSeek</strong> 等大语言模型及传统 CV 模型原理，能够独立复现 <strong>Vision Transformer</strong>、<strong>FCOS</strong> 等经典算法。掌握<strong>迁移学习、模型蒸馏</strong>等模型优化技术。独立开发过 <a href="https://github.com/Nicooo-Wang/Needle">Needle 神经网络推理库</a>，Matmul 算子性能达到 cuBLAS 的 68%。</p>
+      </div>
+    </div>
+
+    <!-- 获奖经历 -->
+    <div class="section">
+      <div class="section-title">获奖经历</div>
+      <ul class="awards-list">
+        <li><span class="award-name">特战卓越贡献奖</span> <span class="award-year">2026</span> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI2026041810823971">[华为内网]</a></li>
+        <li><span class="award-name">质量之星</span> <span class="award-year">2025</span> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202601059667440">[华为内网]</a></li>
+        <li>Omni Infer 推理框架项目组感谢信 <span class="award-year">2025</span> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202601059664048">[华为内网]</a></li>
+        <li><span class="award-name">华山论剑个人金奖</span> <span class="award-year">2024</span> <a class="award-link" href="https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HuaShanLunJian.jpg">[获奖照片]</a> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539">[华为内网]</a></li>
+        <li>上海海思 研发好作品奖 <a class="award-link" href="https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HisiliconHaoZuoPin.jpg">[获奖照片]</a></li>
+        <li>芯星奖 <span class="award-year">2024</span> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501165749786">[华为内网]</a></li>
+        <li>互联网+省级金奖 <a class="award-link" href="https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bgold.jpg">[获奖照片]</a></li>
+        <li>互联网+省级银奖 <a class="award-link" href="https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bsilver.jpg">[获奖照片]</a></li>
+      </ul>
+    </div>
+
+    <!-- 项目经历 -->
+    <div class="section">
+      <div class="section-title">项目经历</div>
+
+      <!-- Project 1 -->
+      <div class="project">
+        <div class="project-header">
+          <h3>欠约束索牵引并联机器人动力学建模与轨迹规划</h3>
+          <div class="project-meta">西安电子科技大学 · 硕士课题 &nbsp;|&nbsp; 2019.9 - 2022.7</div>
+        </div>
+        <p class="project-label">课题背景</p>
+        <p>不完全约束索牵引并联机器人（IRPM）仅使用少量绳索控制末端执行器实现多自由度运动。核心难点在于系统欠约束导致可控与不可控自由度耦合，需建立精确的动力学模型并在轨迹规划中引入动力学约束以保证运动稳定性。</p>
+        <p class="project-label">研究成果</p>
+        <ul>
+          <li><strong>动力学建模</strong>：建立了 IRPM 系统的内部动力学方程（Internal Dynamics），将可控自由度与不可控自由度的耦合关系显式表达，为轨迹规划提供动力学约束基础。同时建立了考虑万向滑轮半径与转角的静平衡逆运动学模型，通过力封闭与几何封闭方程联立，使用带边界条件的凸优化方法求解索力分配。</li>
+          <li><strong>轨迹规划</strong>：提出了 IRPM 点到点轨迹规划方法，通过修改运动规律函数将动力学约束嵌入规划过程，保证起止点稳定且轨迹高阶光滑可导。在三索六自由度系统上分别规划了绕 x 轴、同时绕 x/y 轴、绕 y 轴的三段轨迹，验证了算法有效性。</li>
+          <li><strong>工作空间分析与结构优化</strong>：定义了适用于欠约束系统的静平衡工作空间（SEW），提出求解策略与性能评估方法，通过田口实验与全因子正交实验优化了系统结构参数。</li>
+          <li>使用 Simulink-Simscape Multibody 完成系统建模与 <a href="https://www.bilibili.com/video/BV1hF411q7n8/">仿真验证</a>。</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project">
+        <div class="project-header">
+          <h3>MoE 大模型推理加速 - 计算通信融合算子开发</h3>
+          <div class="project-meta">华为 &nbsp;|&nbsp; 2024.12 - 至今 &nbsp;|&nbsp; <a href="https://gitcode.com/cann/ops-transformer/tree/master/mc2/quant_grouped_mat_mul_allto_allv">Project Link</a></div>
+        </div>
+        <p class="project-label">项目背景</p>
+        <p>MoE（Mixture of Experts）大模型在训练和推理 Prefill 阶段，路由专家的 GroupedMatMul 计算与跨卡 AlltoAllv 通信是关键性能瓶颈。原方案中计算与通信串行执行，且路由专家与共享专家无法并行，导致端到端延迟较高。</p>
+        <p class="project-label">项目成果</p>
+        <ul>
+          <li>获得<strong class="highlight">特战卓越贡献奖</strong>；</li>
+          <li>在常见 shape 下测试，相较于原方案算子<strong class="highlight">性能平均提升 3.5 倍</strong>。</li>
+        </ul>
+        <p class="project-label">技术方案</p>
+        <ul>
+          <li class="tech-item"><strong>计算通信融合</strong>：将路由专家的 GroupedMatMul、Unpermute、AlltoAllv 三个操作融合为单一算子，采用"先计算后通信"策略，实现计算与通信的流水线重叠，消除串行等待。</li>
+          <li class="tech-item"><strong>路由专家与共享专家并行</strong>：在融合算子内部实现路由专家 GMM 与共享专家 MatMul 的并行调度（GmmA2avScheduler），充分利用 NPU 的 AIC 计算资源。</li>
+          <li class="tech-item"><strong>量化支持</strong>：支持 PerTensor 和 MX 两种量化模式（HIFLOAT8 / FP8_E4M3FN / FP8_E5M2 / FP4_E2M1），通过量化 Scale 反量化机制在低精度下保持计算精度。</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project">
+        <div class="project-header">
+          <h3>AIPQ-Service - 端侧 AI 模型部署</h3>
+          <div class="project-meta">华为 · 海思 &nbsp;|&nbsp; 软件架构设计、开发 &nbsp;|&nbsp; 2024.2 - 2024.8</div>
+        </div>
+        <p class="project-label">项目背景</p>
+        <p>通过用户态进程运行分类网络，动态计算图像优化参数，以提升码流播放场景下的图像质量。</p>
+        <p class="project-label">项目成果</p>
+        <ul>
+          <li>架构设计获得<strong class="highlight">华山论剑个人金奖</strong>；</li>
+          <li>在 45 天内完成方案架构设计，开发代码 9000+ 行，模块上线一年内仅收到一例提单；</li>
+          <li>利用 AIPQ 特性，成功使 6xx 系中端芯片与 8xx 系芯片在画质效果上具有相似竞争力。</li>
+        </ul>
+        <p class="project-label">技术方案</p>
+        <ul>
+          <li class="tech-item"><strong>技术难点</strong>：编写多个 OpenCL 算子（YUV444 转 RGB、Histogram 统计等），满足模型前后处理需求；并行运行多组 AIPQ 算法，部分算法需多 worker 协作，以高并发掩盖数据处理过程，确保资源管理和线程安全；处理多芯片、多形态算法差异，对架构设计提出更高要求。</li>
+          <li class="tech-item"><strong>性能优化</strong>：设计 DMA 零拷贝方案、模型硬化方案等，<strong class="highlight">优化 DDR 带宽 50%</strong>；识别并推动 Cast 取帧方案落地，<strong class="highlight">优化 CPU 占用 12%</strong>。</li>
+          <li class="tech-item"><strong>算法优化</strong>：通过迁移学习和模型蒸馏，将模型准确率从 <strong class="highlight">83% 提升至 89%</strong>。</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span>Blog: <a href="https://nicooo-wang.github.io/">nicooo-wang.github.io</a></span>
+    <span>WeChat / 手机：15529252738</span>
+    <span>英语雅思 6.5</span>
+  </div>
+
+</div>
+</body>
+</html>
