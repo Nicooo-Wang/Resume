@@ -173,7 +173,7 @@
     <!-- 个人介绍 -->
     <div class="section">
       <div class="section-title">个人介绍</div>
-      <p class="intro-text">机器人技术工程硕士，研究方向为索牵引并联机器人的动力学建模与欠约束索牵引机器人轨迹规划。当前从事大模型推理加速与部署工作，具备团队管理经验，具备从算子开发到模型部署的全链路工程能力，曾获<strong class="highlight">华山论剑个人金奖</strong>、<strong class="highlight">特战卓越贡献奖</strong>等多项荣誉。</p>
+      <p class="intro-text"><strong>机器人技术工程硕士</strong>，研究方向为索牵引并联机器人的动力学建模与欠约束索牵引<strong>机器人轨迹规划</strong>。当前从事<strong>大模型推理加速与部署工作</strong>，具备<strong>团队管理经验</strong>，具备从算子开发到模型部署的全链路工程能力，曾获<strong class="highlight">华山论剑个人金奖、特战卓越贡献奖</strong>等多项荣誉。</p>
       <div class="skill-block">
         <span class="skill-label">机器人</span>
         <p>熟悉机器人<strong>运动学、动力学建模</strong>方法，熟悉<strong>轨迹规划</strong>与<strong>运动控制</strong>，有 <strong>ROS</strong> 系统使用经验。硕士期间完成欠约束索牵引并联机器人的动力学建模、工作空间求解与点到点轨迹规划研究。</p>
@@ -198,12 +198,9 @@
       <ul class="awards-list">
         <li><span class="award-name">特战卓越贡献奖</span> <span class="award-year">2026</span> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI2026041810823971">[华为内网]</a></li>
         <li><span class="award-name">质量之星</span> <span class="award-year">2025</span> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202601059667440">[华为内网]</a></li>
-        <li>Omni Infer 推理框架项目组感谢信 <span class="award-year">2025</span> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202601059664048">[华为内网]</a></li>
         <li><span class="award-name">华山论剑个人金奖</span> <span class="award-year">2024</span> <a class="award-link" href="https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HuaShanLunJian.jpg">[获奖照片]</a> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501135712539">[华为内网]</a></li>
-        <li>上海海思 研发好作品奖 <a class="award-link" href="https://github.com/Nicooo-Wang/Resume/blob/main/prizes/HisiliconHaoZuoPin.jpg">[获奖照片]</a></li>
-        <li>芯星奖 <span class="award-year">2024</span> <a class="award-link" href="https://wiki.huawei.com/domains/73310/wiki/137756/WIKI202501165749786">[华为内网]</a></li>
         <li>互联网+省级金奖 <a class="award-link" href="https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bgold.jpg">[获奖照片]</a></li>
-        <li>互联网+省级银奖 <a class="award-link" href="https://github.com/Nicooo-Wang/Resume/blob/main/prizes/Internet%2Bsilver.jpg">[获奖照片]</a></li>
+        <li>……</li>
       </ul>
     </div>
 
@@ -211,7 +208,57 @@
     <div class="section">
       <div class="section-title">项目经历</div>
 
-      <!-- Project 1 -->
+      <!-- Project 1: MoE -->
+      <div class="project">
+        <div class="project-header">
+          <h3>MoE 大模型推理加速 - 计算通信融合算子开发</h3>
+          <div class="project-meta">华为 &nbsp;|&nbsp; 2024.12 - 至今 &nbsp;|&nbsp; <a href="https://gitcode.com/cann/ops-transformer/tree/master/mc2/quant_grouped_mat_mul_allto_allv">Project Link</a></div>
+        </div>
+        <p class="project-label">项目背景</p>
+        <p>MoE（Mixture of Experts）大模型在训练和推理 Prefill 阶段，路由专家的 GroupedMatMul 计算与跨卡 AlltoAllv 通信是关键性能瓶颈。原方案中计算与通信串行执行，且路由专家与共享专家无法并行，导致端到端延迟较高。</p>
+        <p class="project-label">项目成果</p>
+        <ul>
+          <li>获得<strong class="highlight">特战卓越贡献奖</strong>；</li>
+          <li>在常见 shape 下测试，相较于原方案算子<strong class="highlight">性能平均提升 1.5 倍</strong>。</li>
+        </ul>
+        <p class="project-label">技术方案</p>
+        <ul>
+          <li class="tech-item"><strong>计算通信融合</strong>：将路由专家的 GroupedMatMul、Unpermute、AlltoAllv 三个操作融合为单一算子，实现计算与通信的流水线重叠，消除串行等待。</li>
+          <li class="tech-item"><strong>路由专家与共享专家并行</strong>：在融合算子内部实现路由专家 GMM 与共享专家 MatMul 的并行调度，充分利用 NPU 的 AIC 计算资源，掩盖通信尾块。</li>
+          <li class="tech-item"><strong>量化支持</strong>：支持 PerTensor 和 MX 两种量化模式（HIFLOAT8 / FP8_E4M3FN / FP8_E5M2 / FP4_E2M1）。</li>
+        </ul>
+      </div>
+
+      <!-- Project 2: AIPQ -->
+      <div class="project">
+        <div class="project-header">
+          <h3>AIPQ-Service - 端侧 AI 模型部署</h3>
+          <div class="project-meta">华为 · 海思 &nbsp;|&nbsp; 软件架构设计、开发 &nbsp;|&nbsp; 2024.2 - 2024.8</div>
+        </div>
+        <p class="project-label">项目背景</p>
+        <p>通过用户态进程运行分类网络，动态计算图像优化参数，以提升码流播放场景下的图像质量。</p>
+        <p class="project-label">项目成果</p>
+        <ul>
+          <li>架构设计获得<strong class="highlight">华山论剑个人金奖</strong>；</li>
+          <li>在 45 天内完成方案架构设计，开发代码 9000+ 行，模块上线一年内仅收到一例提单；</li>
+          <li>利用 AIPQ 特性，成功使 6xx 系中端芯片与 8xx 系芯片在画质效果上具有相似竞争力。</li>
+        </ul>
+        <p class="project-label">技术方案简述</p>
+        <p>通过用户态守护进程实时多线程运行多组 AIPQ 模型，动态计算图像优化参数。</p>
+        <p class="project-label">技术难点</p>
+        <ul>
+          <li class="tech-item">编写多个 OpenCL 算子（YUV444 转 RGB、Histogram 统计等），满足模型前后处理需求。</li>
+          <li class="tech-item">对性能要求极高，根据场景不同，需要并行运行多组 AIPQ 算法，部分算法需要多 worker 协作，以高并发掩盖数据处理过程，同时确保各个场景下模块的资源管理和线程安全。</li>
+          <li class="tech-item">考虑到架构演进，需要处理多芯片、多形态算法的差异，对架构设计提出更高要求。</li>
+        </ul>
+        <p class="project-label">算法与性能优化</p>
+        <ul>
+          <li class="tech-item"><strong>性能优化</strong>：设计 DMA 零拷贝方案、模型硬化方案等，有效降低内存拷贝次数，<strong class="highlight">优化 DDR 带宽 50%</strong>；识别并推动 Cast 取帧方案落地，<strong class="highlight">优化 CPU 占用 12%</strong>。</li>
+          <li class="tech-item"><strong>算法优化</strong>：通过迁移学习和模型蒸馏，将模型准确率从 <strong class="highlight">83% 提升至 89%</strong>。</li>
+        </ul>
+      </div>
+
+      <!-- Project 3: 机器人 -->
       <div class="project">
         <div class="project-header">
           <h3>欠约束索牵引并联机器人动力学建模与轨迹规划</h3>
@@ -227,58 +274,15 @@
           <li>使用 Simulink-Simscape Multibody 完成系统建模与 <a href="https://www.bilibili.com/video/BV1hF411q7n8/">仿真验证</a>。</li>
         </ul>
       </div>
-
-      <!-- Project 2 -->
-      <div class="project">
-        <div class="project-header">
-          <h3>MoE 大模型推理加速 - 计算通信融合算子开发</h3>
-          <div class="project-meta">华为 &nbsp;|&nbsp; 2024.12 - 至今 &nbsp;|&nbsp; <a href="https://gitcode.com/cann/ops-transformer/tree/master/mc2/quant_grouped_mat_mul_allto_allv">Project Link</a></div>
-        </div>
-        <p class="project-label">项目背景</p>
-        <p>MoE（Mixture of Experts）大模型在训练和推理 Prefill 阶段，路由专家的 GroupedMatMul 计算与跨卡 AlltoAllv 通信是关键性能瓶颈。原方案中计算与通信串行执行，且路由专家与共享专家无法并行，导致端到端延迟较高。</p>
-        <p class="project-label">项目成果</p>
-        <ul>
-          <li>获得<strong class="highlight">特战卓越贡献奖</strong>；</li>
-          <li>在常见 shape 下测试，相较于原方案算子<strong class="highlight">性能平均提升 3.5 倍</strong>。</li>
-        </ul>
-        <p class="project-label">技术方案</p>
-        <ul>
-          <li class="tech-item"><strong>计算通信融合</strong>：将路由专家的 GroupedMatMul、Unpermute、AlltoAllv 三个操作融合为单一算子，采用"先计算后通信"策略，实现计算与通信的流水线重叠，消除串行等待。</li>
-          <li class="tech-item"><strong>路由专家与共享专家并行</strong>：在融合算子内部实现路由专家 GMM 与共享专家 MatMul 的并行调度（GmmA2avScheduler），充分利用 NPU 的 AIC 计算资源。</li>
-          <li class="tech-item"><strong>量化支持</strong>：支持 PerTensor 和 MX 两种量化模式（HIFLOAT8 / FP8_E4M3FN / FP8_E5M2 / FP4_E2M1），通过量化 Scale 反量化机制在低精度下保持计算精度。</li>
-        </ul>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project">
-        <div class="project-header">
-          <h3>AIPQ-Service - 端侧 AI 模型部署</h3>
-          <div class="project-meta">华为 · 海思 &nbsp;|&nbsp; 软件架构设计、开发 &nbsp;|&nbsp; 2024.2 - 2024.8</div>
-        </div>
-        <p class="project-label">项目背景</p>
-        <p>通过用户态进程运行分类网络，动态计算图像优化参数，以提升码流播放场景下的图像质量。</p>
-        <p class="project-label">项目成果</p>
-        <ul>
-          <li>架构设计获得<strong class="highlight">华山论剑个人金奖</strong>；</li>
-          <li>在 45 天内完成方案架构设计，开发代码 9000+ 行，模块上线一年内仅收到一例提单；</li>
-          <li>利用 AIPQ 特性，成功使 6xx 系中端芯片与 8xx 系芯片在画质效果上具有相似竞争力。</li>
-        </ul>
-        <p class="project-label">技术方案</p>
-        <ul>
-          <li class="tech-item"><strong>技术难点</strong>：编写多个 OpenCL 算子（YUV444 转 RGB、Histogram 统计等），满足模型前后处理需求；并行运行多组 AIPQ 算法，部分算法需多 worker 协作，以高并发掩盖数据处理过程，确保资源管理和线程安全；处理多芯片、多形态算法差异，对架构设计提出更高要求。</li>
-          <li class="tech-item"><strong>性能优化</strong>：设计 DMA 零拷贝方案、模型硬化方案等，<strong class="highlight">优化 DDR 带宽 50%</strong>；识别并推动 Cast 取帧方案落地，<strong class="highlight">优化 CPU 占用 12%</strong>。</li>
-          <li class="tech-item"><strong>算法优化</strong>：通过迁移学习和模型蒸馏，将模型准确率从 <strong class="highlight">83% 提升至 89%</strong>。</li>
-        </ul>
-      </div>
     </div>
 
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    <span>Blog: <a href="https://nicooo-wang.github.io/">nicooo-wang.github.io</a></span>
+    <span>Blog: <a href="https://nicooo-wang.github.io/">主要分享架构设计、测试驱动开发等内容</a></span>
     <span>WeChat / 手机：15529252738</span>
-    <span>英语雅思 6.5</span>
+    <span>英语雅思 6.5，能够无压力阅读英文论文、听懂英文课程与技术讲座</span>
   </div>
 
 </div>
